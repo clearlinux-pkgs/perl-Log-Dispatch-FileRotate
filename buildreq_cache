@@ -1,0 +1,13 @@
+1.36
+perl(Date::Manip)
+perl(Log::Dispatch)
+perl(Log::Dispatch::File)
+perl(Log::Dispatch::Output)
+perl(Log::Dispatch::Screen)
+perl(Params::ValidationCompiler)
+perl(Path::Tiny)
+perl(Specio::Exporter)
+perl(Sub::Uplevel)
+perl(Test::Warn)
+perl(Try::Tiny)
+perl(namespace::autoclean)
