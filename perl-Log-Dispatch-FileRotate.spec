@@ -4,12 +4,13 @@
 #
 Name     : perl-Log-Dispatch-FileRotate
 Version  : 1.36
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/M/MS/MSCHOUT/Log-Dispatch-FileRotate-1.36.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MS/MSCHOUT/Log-Dispatch-FileRotate-1.36.tar.gz
 Summary  : 'Log to Files that Archive/Rotate Themselves'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+Requires: perl-Log-Dispatch-FileRotate-license = %{version}-%{release}
 Requires: perl-Log-Dispatch-FileRotate-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Date::Manip)
@@ -38,6 +39,14 @@ Requires: perl-Log-Dispatch-FileRotate = %{version}-%{release}
 
 %description dev
 dev components for the perl-Log-Dispatch-FileRotate package.
+
+
+%package license
+Summary: license components for the perl-Log-Dispatch-FileRotate package.
+Group: Default
+
+%description license
+license components for the perl-Log-Dispatch-FileRotate package.
 
 
 %package perl
@@ -75,6 +84,8 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Log-Dispatch-FileRotate
+cp %{_builddir}/Log-Dispatch-FileRotate-1.36/LICENSE %{buildroot}/usr/share/package-licenses/perl-Log-Dispatch-FileRotate/bab88f54ea8c7c2588e407bd69fad8bf7cb47c1b
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -94,8 +105,12 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Log::Dispatch::FileRotate::Flock.3
 /usr/share/man/man3/Log::Dispatch::FileRotate::Mutex.3
 
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Log-Dispatch-FileRotate/bab88f54ea8c7c2588e407bd69fad8bf7cb47c1b
+
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/Log/Dispatch/FileRotate.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Log/Dispatch/FileRotate/Flock.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Log/Dispatch/FileRotate/Mutex.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Log/Dispatch/FileRotate.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Log/Dispatch/FileRotate/Flock.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Log/Dispatch/FileRotate/Mutex.pm
