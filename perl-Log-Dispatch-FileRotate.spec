@@ -4,7 +4,7 @@
 #
 Name     : perl-Log-Dispatch-FileRotate
 Version  : 1.36
-Release  : 3
+Release  : 4
 URL      : https://cpan.metacpan.org/authors/id/M/MS/MSCHOUT/Log-Dispatch-FileRotate-1.36.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MS/MSCHOUT/Log-Dispatch-FileRotate-1.36.tar.gz
 Summary  : 'Log to Files that Archive/Rotate Themselves'
@@ -111,6 +111,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/Log/Dispatch/FileRotate.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Log/Dispatch/FileRotate/Flock.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Log/Dispatch/FileRotate/Mutex.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Log/Dispatch/FileRotate.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Log/Dispatch/FileRotate/Flock.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Log/Dispatch/FileRotate/Mutex.pm
