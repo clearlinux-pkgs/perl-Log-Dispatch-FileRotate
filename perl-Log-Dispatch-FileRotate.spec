@@ -111,6 +111,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.32.1/Log/Dispatch/FileRotate.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Log/Dispatch/FileRotate/Flock.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Log/Dispatch/FileRotate/Mutex.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Log/Dispatch/FileRotate.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Log/Dispatch/FileRotate/Flock.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Log/Dispatch/FileRotate/Mutex.pm
