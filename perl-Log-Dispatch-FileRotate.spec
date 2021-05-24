@@ -4,7 +4,7 @@
 #
 Name     : perl-Log-Dispatch-FileRotate
 Version  : 1.36
-Release  : 8
+Release  : 9
 URL      : https://cpan.metacpan.org/authors/id/M/MS/MSCHOUT/Log-Dispatch-FileRotate-1.36.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MS/MSCHOUT/Log-Dispatch-FileRotate-1.36.tar.gz
 Summary  : 'Log to Files that Archive/Rotate Themselves'
